@@ -1,23 +1,15 @@
 <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <mask id="key-mask">
-      <!-- Everything starts black (fully transparent) -->
-      <rect width="32" height="32" fill="black" />
-      <!-- Solid key background (white = visible) -->
-      <rect x="1" y="1" width="30" height="30" rx="3" fill="white" />
-      <!-- Cutout arrow (black = hole) -->
-      <text x="16" y="22" 
-            text-anchor="middle"
-            font-family="Courier New, monospace" 
-            font-size="14" 
-            font-weight="bold"
-            fill="black">
-        &lt;--
-      </text>
-      <!-- Border cutout -->
-      <rect x="1" y="1" width="30" height="30" rx="3" fill="none" stroke="black" stroke-width="2"/>
-    </mask>
-  </defs>
-  <!-- Apply the mask to a solid colored shape -->
-  <rect width="32" height="32" fill="#FF6B35" mask="url(#key-mask)" />
+  <!-- Black background box -->
+  <rect x="1" y="1" width="30" height="30" rx="3" fill="black" />
+  <!-- Orange outline -->
+  <rect x="1" y="1" width="30" height="30" rx="3" fill="none" stroke="#FF6B35" stroke-width="2"/>
+  <!-- Orange arrow -->
+  <text x="16" y="22" 
+        text-anchor="middle"
+        font-family="Courier New, monospace" 
+        font-size="14" 
+        font-weight="bold"
+        fill="#FF6B35">
+    &lt;--
+  </text>
 </svg>

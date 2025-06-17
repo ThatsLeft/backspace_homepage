@@ -16,25 +16,20 @@ pub async fn homepage() -> Result<HttpResponse> {
 fn generate_homepage_html() -> String {
     let svg_logo = format!(
         r#"<svg width="64" height="32" viewBox="0 0 128 64" xmlns="http://www.w3.org/2000/svg">
-            <mask id="key-mask">
-                <!-- Everything starts black (fully transparent) -->
-                <rect width="128" height="64" fill="black" />
-                <!-- Solid key background (white = visible) -->
-                <rect x="2" y="2" width="124" height="60" rx="6" fill="white" />
-                <!-- Cutout arrow (black = hole) -->
-                <text x="66" y="42"
-                      font-family="Courier New, monospace"
-                      font-size="28"
-                      fill="black">
-                  &lt;--
-                </text>
-                <!-- Optional: border cutout by making the outer frame black -->
-                <rect x="2" y="2" width="124" height="60" rx="6" fill="none" stroke="black" stroke-width="4"/>
-            </mask>
-            <!-- Apply the mask to a solid black shape -->
-            <rect width="128" height="64" fill="{}" mask="url(#key-mask)" />
+            <!-- Black background box -->
+            <rect x="2" y="2" width="124" height="60" rx="6" fill="black" />
+            <!-- Orange outline -->
+            <rect x="2" y="2" width="124" height="60" rx="6" fill="none" stroke="{}" stroke-width="4"/>
+            <!-- Orange arrow -->
+            <text x="66" y="42"
+                  font-family="Courier New, monospace"
+                  font-size="28"
+                  fill="{}"
+                  text-anchor="middle">
+              &lt;--
+            </text>
         </svg>"#,
-        "#FF6B35"
+        "#FF6B35", "#FF6B35"
     );
     
     format!(
