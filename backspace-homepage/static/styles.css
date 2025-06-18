@@ -75,9 +75,11 @@ body {
 .main-content {
     flex: 1;
     display: flex;
+    flex-direction: column; /* Changed from default row */
     align-items: center;
     justify-content: center;
     padding: 3rem 0;
+    gap: 2rem; /* Add gap between sections */
 }
 
 .welcome-section {
@@ -171,4 +173,66 @@ body {
 @keyframes cursor {
     0%, 50% { opacity: 1; }
     51%, 100% { opacity: 0; }
+}
+
+/* Add this to your existing styles.css file */
+
+.embedded-section {
+    text-align: center;
+    max-width: 800px;
+    /* Remove margin: 2rem auto 0; since flex handles centering */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border: 2px solid #FF6B35;
+    border-radius: 8px;
+    box-shadow: 
+        0 0 20px rgba(255, 107, 53, 0.3),
+        inset 0 0 20px rgba(0, 255, 0, 0.1);
+}
+
+.embedded-section h3 {
+    color: #FF6B35;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Orbitron', monospace;
+    text-shadow: 0 0 10px #FF6B35;
+    text-align: center;
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    height: 750px;
+    border: 1px solid #4A5568;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #0a0a0a;
+}
+
+.iframe-container iframe {
+    width: 500px;
+    height: 700px;
+    border: none;
+    background: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 2rem 0; /* Reduce padding on mobile */
+        gap: 1.5rem; /* Smaller gap on mobile */
+    }
+    
+    .embedded-section {
+        padding: 1rem;
+        /* Remove margin since flex handles positioning */
+    }
+    
+    .embedded-section h3 {
+        font-size: 1.4rem;
+    }
+    
+    .iframe-container {
+        height: 500px;
+    }
 }
