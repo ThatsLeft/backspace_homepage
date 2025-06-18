@@ -1,0 +1,14 @@
+<svg width="64" height="32" viewBox="0 0 128 64" xmlns="http://www.w3.org/2000/svg">
+    <!-- Black background box -->
+    <rect x="2" y="2" width="124" height="60" rx="6" fill="black" />
+    <!-- Orange outline -->
+    <rect x="2" y="2" width="124" height="60" rx="6" fill="none" stroke="#FF6B35" stroke-width="4"/>
+    <!-- Orange arrow -->
+    <text x="66" y="42"
+          font-family="Courier New, monospace"
+          font-size="28"
+          fill="#FF6B35"
+          text-anchor="middle">
+      &lt;--
+    </text>
+</svg>
